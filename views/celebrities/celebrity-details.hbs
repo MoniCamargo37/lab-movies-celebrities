@@ -1,0 +1,20 @@
+<h1>HollyWood Stars</h1>
+<div class="navBtn">
+  <a href="/">Home</a>
+  <a href="/movies">Movies</a>
+  <a href="/celebrities">Celebrities</a>
+</div>
+<div class="containerCelebreDetails">
+  <div class="celebreDetails">
+    <img src="{{celebrity.image}}" alt="{{celebrity.name}}" />
+    <h2>{{celebrity.name}}</h2>
+    <ul>
+      <li>Occupation: {{celebrity.occupation}}</li>
+      <li> CatchPhrase:{{celebrity.catchPhrase}}</li>
+    </ul>
+  </div>
+  <div class="btnCelebreDetails">
+    <a href="/celebrities/{{celebrity._id}}/edit">EDIT</a>
+    <a href="/celebrities"> Go back </a>
+  </div>
+</div>

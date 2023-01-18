@@ -1,0 +1,22 @@
+<h1>Edit a celebrity</h1>
+<hr />
+<div class="editMoviePage">
+
+  <form action="/celebrities/{{celebrity._id}}/edit" method="post">
+    <label>Name:</label>
+    <input required type="text" name="name" value="{{celebrity.name}}" />
+    <label>Image:</label>
+    <input required type="text" name="image" value="{{celebrity.image}}" />
+    <label>Occupation:</label>
+    <input
+      required
+      type="text"
+      name="occupation"
+      value="{{celebrity.occupation}}"
+    />
+    <label>Catch Phrase:</label>
+    <textarea required name="catchPhrase">{{celebrity.catchPhrase}} </textarea>
+    <button type="submit">SAVE</button>
+  </form>
+  <a href="/celebrities" class="back-button">go back </a>
+</div>

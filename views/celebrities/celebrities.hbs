@@ -1,0 +1,26 @@
+<h1>HollyWood Stars</h1>
+<div class="navBtnCelebre">
+  <a href="celebrities/create">Add Celebrity</a>
+  <a href="/movies">Movies</a>
+  <a href="/">Go back home</a>
+</div>
+
+<h2 class="celebritiesPageH2">CELEBRITIES</h2>
+
+<div class="celebritiesPage">
+  {{#each celebrities}}
+    <div>
+      <div class="listOfCelebrities">
+        <img src="{{image}}" alt="celebrity pic" />
+        <li>Name: {{this.name}}</li>
+        <li>Occupation: {{this.occupation}}</li>
+        <li> {{this.catchPhrase}}</li>
+      </div>
+      <div class="btnCelebreList">
+        <a href="/delete/{{_id}}">DELETE </a>
+        <a href="/celebrities/{{_id}}/edit">EDIT</a>
+        <a href="/celebrities/{{_id}}">SEE DETAILS</a>
+      </div>
+    </div>
+  {{/each}}
+</div>

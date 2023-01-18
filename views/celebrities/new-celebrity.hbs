@@ -1,0 +1,16 @@
+<h1>Create a new celebrity</h1>
+<hr />
+<div class="editMoviePage">
+  <form action="/celebrities/create" method="post">
+    <label>Name:</label>
+    <input required type="text" name="name" placeholder="Celebrity's name" />
+    <label>Occupation:</label>
+    <input required type="text" name="occupation" placeholder="Actor" />
+    <label>Image: </label>
+    <input required type="text" name="image" placeholder="https...//" />
+    <label>Catch Phrase:</label>
+    <input required type="text" name="catchPhrase" placeholder="catchPhrase" />
+    <button type="submit">Submit</button>
+  </form>
+  <a href="/celebrities" class="back-button">Go back </a>
+</div>

@@ -1,9 +1,8 @@
-//  Add your code here
 const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
-const celebritySchema = new Schema({
-  name: {
+const moviesSchema = new Schema({
+  title: {
     type: String,
     required: true,
   },
@@ -11,16 +10,19 @@ const celebritySchema = new Schema({
     type: String,
     required: true,
   },
-  occupation: {
+  genre: {
     type: String,
     required: true,
   },
-  catchPhrase: {
+  plot: {
     type: String,
     required: true,
+  },
+  cast: {
+    type: [Schema.Types.ObjectId],
+    ref: "Celebrity",
   },
 });
 
-const Celebrity = mongoose.model("Celebrity", celebritySchema);
-
-module.exports = Celebrity;
+const Movies = mongoose.model("Movie", moviesSchema);
+module.exports = Movies;

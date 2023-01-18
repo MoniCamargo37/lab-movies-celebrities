@@ -1,0 +1,21 @@
+<h1>HollyWood Stars</h1>
+<div class="navBtn">
+  <a href="/">Home</a>
+  <a href="/movies">Movies</a>
+  <a href="/celebrities">Celebrities</a>
+</div>
+<div class="container">
+  <h2>MOVIE LIST</h2>
+  <hr />
+  <div class="contentContainer">
+    {{#each movies}}
+
+      <h3><a href="/movie-details/{{_id}}">{{title}}</a></h3>
+
+    {{/each}}
+  </div>
+</div>
+<div class="btnMovieList">
+  <a href="movies/create">Add a New Movie</a>
+  <a href="/">Go back home</a>
+</div>

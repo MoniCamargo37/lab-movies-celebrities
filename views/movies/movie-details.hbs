@@ -1,0 +1,32 @@
+<h1>HollyWood Stars</h1>
+<div class="navBtn">
+  <a href="/">Home</a>
+  <a href="/movies">Movies</a>
+  <a href="/celebrities">Celebrities</a>
+</div>
+<div class="containerDetails">
+  <div class="movieDetails">
+    <h2>{{movie.title}}</h2>
+    <hr />
+    <img src="{{movie.image}}" alt="{{movie.title}}" />
+    <p class="boldInfo">TITLE : {{movie.title}}</p>
+    <p>GENRE : {{movie.genre}}</p>
+    <p>PLOT : {{movie.plot}}</p>
+    <p>CAST :
+
+      {{#each movie.cast}}
+        {{name}}
+      {{/each}}
+
+    </p>
+ </div> 
+  <div class="btnMovieDetails">
+    <a href="/movies/{{movie._id}}/edit">Edit Movie</a>
+
+    <form action="/movies/{{movie._id}}/delete" method="post">
+      <button type="submit">Delete movie</button>
+    </form>
+
+    <a href="/movies">go back to movies</a>
+  </div>
+</div>
