@@ -1,4 +1,8 @@
+const MONGO_URL = 
+"mongodb://localhost/27017lab-movies-celebrities"
 const router = require("express").Router();
+const mongoose = require("mongoose");
+mongoose.set("strictQuery", false);
 const Celebrity = require("../models/Celebrity.model");
 
 //All Routes here

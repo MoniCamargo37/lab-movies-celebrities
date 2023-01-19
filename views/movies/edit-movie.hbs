@@ -13,7 +13,7 @@
       <label>Plot: </label>
       <textarea required name="plot">{{movie.plot}}</textarea>
       <label>Cast: </label>
-    <select required name="cast" multiple>
+    <select name="cast" multiple>
       {{#each celebrities}}
         <option value="{{_id}}">{{name}}</option>
       {{/each}}
